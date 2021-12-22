@@ -1,7 +1,11 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { Divider } from "react-native-elements";
+import CommentIcon from "../../assets/CommentIcon";
 import DotsIcon from "../../assets/DotsIcon";
+import HeartIcon from "../../assets/HeartIcon";
+import SaveIcon from "../../assets/SaveIcon";
+import ShareIcon from "../../assets/ShareIcon";
 
 const Post = ({ post }) => {
   return (
@@ -10,6 +14,9 @@ const Post = ({ post }) => {
       <View style={{ marginTop: 5 }}>
         <PostHeader post={post} />
         <PostImage post={post} />
+        <View style={{ marginHorizontal: 15, marginTop: 10 }}>
+          <PostFooter />
+        </View>
       </View>
     </View>
   );
@@ -41,6 +48,32 @@ const PostImage = ({ post }) => (
       source={{ uri: post.imageUrl }}
       style={{ height: "100%", resizeMode: "cover" }}
     />
+  </View>
+);
+
+const PostFooter = () => (
+  <View
+    style={{
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    }}
+  >
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <TouchableOpacity>
+        <HeartIcon width={30} height={30} />
+      </TouchableOpacity>
+      <TouchableOpacity style={{ marginHorizontal: 7 }}>
+        <CommentIcon />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <ShareIcon />
+      </TouchableOpacity>
+    </View>
+
+    <View>
+      <SaveIcon />
+    </View>
   </View>
 );
 

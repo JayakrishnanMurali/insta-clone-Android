@@ -1,13 +1,12 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-const HeartIcon = (props) => (
+const HeartIcon = ({ width = 25, height = 25 }) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    {...props}
-    width={25}
-    height={25}
+    width={width}
+    height={height}
   >
     <Path
       fill="#FFF"
