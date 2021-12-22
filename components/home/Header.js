@@ -17,11 +17,14 @@ const Header = () => {
           <PlusIcons />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.heartIcon}>
           <HeartIcon />
         </TouchableOpacity>
 
         <TouchableOpacity>
+          <View style={styles.unReadMessages}>
+            <Text style={styles.unReadBadgeNumber}>11</Text>
+          </View>
           <ChatIcon />
         </TouchableOpacity>
       </View>
@@ -49,6 +52,25 @@ const styles = StyleSheet.create({
     height: 30,
     marginLeft: 10,
     resizeMode: "contain",
+  },
+  heartIcon: {
+    paddingHorizontal: 10,
+  },
+  unReadMessages: {
+    backgroundColor: "#e63946",
+    position: "absolute",
+    left: 13,
+    bottom: 13,
+    width: 22,
+    height: 18,
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 100,
+  },
+  unReadBadgeNumber: {
+    color: "white",
+    fontWeight: "700",
   },
 });
 export default Header;
