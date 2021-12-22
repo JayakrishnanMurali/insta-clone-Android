@@ -5,7 +5,7 @@ export const POSTS = [
     imageUrl:
       "https://st1.bollywoodlife.com/wp-content/uploads/2021/11/Dulquer-Salmaan-in-Kurup.jpg",
     user: USER_DATA[4].user,
-    likes: 12000,
+    likes: "12,000",
     caption: "Watch now on theaters!!",
     profile_pic: USER_DATA[4].image,
     comments: [
@@ -23,7 +23,7 @@ export const POSTS = [
     imageUrl:
       "https://cdn-eapdk.nitrocdn.com/lKBvBPaFEHRwwGScTAEgXUtNNBrtglcn/assets/static/optimized/rev-e6e6a76/wp-content/uploads/2021/12/spidermannowayhome.jpg",
     user: USER_DATA[2].user,
-    likes: 82000,
+    likes: "82,000",
     caption: "I hate doing this.",
     profile_pic: USER_DATA[2].image,
     comments: [
@@ -41,8 +41,8 @@ export const POSTS = [
     imageUrl:
       "https://icdn.psgtalk.com/wp-content/uploads/2021/11/RB-Leipzig-vs-Paris-Saint-Germain-Champions-League-2021.jpg",
     user: USER_DATA[5].user,
-    likes: 1232000,
-    caption: "peace",
+    likes: "12,32,000",
+    caption: "Peace and War",
     profile_pic: USER_DATA[5].image,
     comments: [
       {
@@ -59,7 +59,7 @@ export const POSTS = [
     imageUrl:
       "https://c.ndtvimg.com/2021-12/8oqtfdlo_india-afp_625x300_05_December_21.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605",
     user: USER_DATA[0].user,
-    likes: 453000,
+    likes: "4,53,000",
     caption: "..and its a wrap. Well played boys.",
     profile_pic: USER_DATA[0].image,
     comments: [

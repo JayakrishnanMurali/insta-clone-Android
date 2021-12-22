@@ -16,6 +16,9 @@ const Post = ({ post }) => {
         <PostImage post={post} />
         <View style={{ marginHorizontal: 15, marginTop: 10 }}>
           <PostFooter />
+          <Likes post={post} />
+          <Caption post={post} />
+          <Comment post={post} />
         </View>
       </View>
     </View>
@@ -37,7 +40,9 @@ const PostHeader = ({ post }) => (
     </View>
 
     <View>
-      <DotsIcon />
+      <TouchableOpacity>
+        <DotsIcon />
+      </TouchableOpacity>
     </View>
   </View>
 );
@@ -72,8 +77,42 @@ const PostFooter = () => (
     </View>
 
     <View>
-      <SaveIcon />
+      <TouchableOpacity>
+        <SaveIcon />
+      </TouchableOpacity>
     </View>
+  </View>
+);
+
+const Likes = ({ post }) => (
+  <View style={{ flexDirection: "row", marginTop: 4 }}>
+    <Text style={{ fontWeight: "700", color: "white" }}>
+      {post.likes} likes
+    </Text>
+  </View>
+);
+
+const Caption = ({ post }) => (
+  <View style={{ marginTop: 5 }}>
+    <Text style={{ color: "white" }}>
+      <Text style={{ fontWeight: "700" }}>{post.user}</Text>
+      <Text> {post.caption}</Text>
+    </Text>
+  </View>
+);
+
+const Comment = ({ post }) => (
+  <View>
+    <Text style={{ color: "gray", marginTop: 5 }}>View all 2 comments</Text>
+
+    {post.comments.map((com, index) => (
+      <View key={index}>
+        <Text style={{ color: "white" }}>
+          <Text style={{ fontWeight: "700" }}>{com.user}</Text>
+          <Text> {com.comment}</Text>
+        </Text>
+      </View>
+    ))}
   </View>
 );
 
