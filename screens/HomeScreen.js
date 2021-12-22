@@ -1,13 +1,20 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
+import Header from "../components/home/Header";
 
 import SafeViewAndroid from "../components/SafeViewAndroid";
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={SafeViewAndroid.AndroidSafeArea}>
-      <Text>Home Screen</Text>
+    <SafeAreaView style={[styles.container, SafeViewAndroid.AndroidSafeArea]}>
+      <Header />
     </SafeAreaView>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "black",
+    flex: 1,
+  },
+});
 export default HomeScreen;
