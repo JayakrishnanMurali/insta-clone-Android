@@ -4,7 +4,7 @@ import { USER_DATA } from "../../data/UserData";
 
 const Stories = () => {
   return (
-    <View style={{ marginBottom: 13 }}>
+    <View style={{ marginBottom: 7, marginTop: 7 }}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {USER_DATA.map((story, index) => (
           <View key={index} style={{ alignItems: "center" }}>
